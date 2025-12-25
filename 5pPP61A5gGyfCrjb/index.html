@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#7d574c">
 <meta name="generator" content="Hexo 4.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#7d574c">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog_v0/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog_v0/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog_v0/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog_v0/images/logo.svg" color="#7d574c">
 
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/blog_v0/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/blog_v0/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yuanlehome.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":300,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"yuanlehome.github.io","root":"/blog_v0/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":300,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="第6章：继承与面向对象设计条款32：确定你的public继承塑模出is-a关系 “public继承”意味is-a。适用于base class身上的每一件事情一定也适用于derived class身上，因为每一个derived class对象也都是一个base class对象">
@@ -101,7 +101,7 @@
 
   <div class="site-meta">
 
-    <a href="/" class="brand" rel="start">
+    <a href="/blog_v0/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <h1 class="site-title">LYL's Blog</h1>
       <span class="logo-line-after"><i></i></span>
@@ -122,27 +122,27 @@
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/blog_v0/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+    <a href="/blog_v0/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/blog_v0/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/blog_v0/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/blog_v0/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -232,11 +232,11 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a>
+                  <a href="/blog_v0/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Effective-C/" itemprop="url" rel="index"><span itemprop="name">Effective C++</span></a>
+                  <a href="/blog_v0/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Effective-C/" itemprop="url" rel="index"><span itemprop="name">Effective C++</span></a>
                 </span>
             </span>
 
@@ -498,8 +498,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Effective-C/" rel="tag"># Effective C++</a>
-              <a href="/tags/C/" rel="tag"># C++</a>
+              <a href="/blog_v0/tags/Effective-C/" rel="tag"># Effective C++</a>
+              <a href="/blog_v0/tags/C/" rel="tag"># C++</a>
           </div>
 
         
@@ -508,11 +508,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/eSK55yN7G7dNea2c/" rel="prev" title="数据结构与算法之概论">
+    <a href="/blog_v0/eSK55yN7G7dNea2c/" rel="prev" title="数据结构与算法之概论">
       <i class="fa fa-chevron-left"></i> 数据结构与算法之概论
     </a></div>
       <div class="post-nav-item">
-    <a href="/MBICE5WlMJtd4Rku/" rel="next" title="Effective C++之模板与泛型编程">
+    <a href="/blog_v0/MBICE5WlMJtd4Rku/" rel="next" title="Effective C++之模板与泛型编程">
       Effective C++之模板与泛型编程 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -585,27 +585,27 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Liu Y.L."
-      src="/images/avatar.png">
+      src="/blog_v0/images/avatar.png">
   <p class="site-author-name" itemprop="name">Liu Y.L.</p>
   <div class="site-description" itemprop="description">寒江孤影-江湖故人-相逢何必曾相识</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+          <a href="/blog_v0/archives/">
         
           <span class="site-state-item-count">46</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
+            <a href="/blog_v0/categories/">
           
         <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
+            <a href="/blog_v0/tags/">
           
         <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">标签</span></a>
@@ -716,30 +716,30 @@
   </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="/blog_v0/lib/anime.min.js"></script>
+  <script src="/blog_v0/lib/velocity/velocity.min.js"></script>
+  <script src="/blog_v0/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/js/utils.js"></script>
+<script src="/blog_v0/js/utils.js"></script>
 
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
+<script src="/blog_v0/js/motion.js"></script>
 
 
-<script src="/js/next-boot.js"></script>
+<script src="/blog_v0/js/schemes/pisces.js"></script>
 
 
-
-
-  
+<script src="/blog_v0/js/next-boot.js"></script>
 
 
 
 
   
-<script src="/js/local-search.js"></script>
+
+
+
+
+  
+<script src="/blog_v0/js/local-search.js"></script>
 
 
 
@@ -777,4 +777,4 @@ NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
 </html>
 
 <!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/clicklove.js"></script>
+<script type="text/javascript" src="/blog_v0/js/src/clicklove.js"></script>
