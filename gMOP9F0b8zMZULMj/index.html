@@ -23,31 +23,31 @@
   <meta name="description" content="13. 重载类本身的operator new&#x2F;delete1234567891011121314151617181920212223242526272829303132333435363738394041using namespace std;struct A&amp;#123;    A()    &amp;#123;        cout &lt;&lt; &quot;A() : this:&quot; &lt;&lt; th">
 <meta property="og:type" content="article">
 <meta property="og:title" content="认识C++内存管理的工具 （三）">
-<meta property="og:url" content="https://yuanlehome.github.io/gMOP9F0b8zMZULMj/index.html">
+<meta property="og:url" content="https://yuanlehome.github.io/blog_v0/gMOP9F0b8zMZULMj/index.html">
 <meta property="og:site_name" content="LYL&#39;s Blog">
 <meta property="og:description" content="13. 重载类本身的operator new&#x2F;delete1234567891011121314151617181920212223242526272829303132333435363738394041using namespace std;struct A&amp;#123;    A()    &amp;#123;        cout &lt;&lt; &quot;A() : this:&quot; &lt;&lt; th">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://yuanlehome.github.io/gMOP9F0b8zMZULMj/image-20210316211007882.png">
-<meta property="og:image" content="https://yuanlehome.github.io/gMOP9F0b8zMZULMj/image-20210316211821850.png">
-<meta property="og:image" content="https://yuanlehome.github.io/gMOP9F0b8zMZULMj/image-20210316211849406.png">
-<meta property="og:image" content="https://yuanlehome.github.io/gMOP9F0b8zMZULMj/image-20210316211942624.png">
-<meta property="og:image" content="https://yuanlehome.github.io/gMOP9F0b8zMZULMj/image-20210316212107044.png">
-<meta property="og:image" content="https://yuanlehome.github.io/gMOP9F0b8zMZULMj/image-20210316212317475.png">
-<meta property="og:image" content="https://yuanlehome.github.io/gMOP9F0b8zMZULMj/image-20210316212449598.png">
-<meta property="og:image" content="https://yuanlehome.github.io/gMOP9F0b8zMZULMj/image-20210316214052184.png">
-<meta property="og:image" content="https://yuanlehome.github.io/gMOP9F0b8zMZULMj/image-20210317210723036.png">
-<meta property="og:image" content="https://yuanlehome.github.io/gMOP9F0b8zMZULMj/image-20210317211006818.png">
-<meta property="og:image" content="https://yuanlehome.github.io/gMOP9F0b8zMZULMj/image-20210317211425498.png">
-<meta property="og:image" content="https://yuanlehome.github.io/gMOP9F0b8zMZULMj/image-20210317211445418.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/gMOP9F0b8zMZULMj/image-20210316211007882.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/gMOP9F0b8zMZULMj/image-20210316211821850.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/gMOP9F0b8zMZULMj/image-20210316211849406.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/gMOP9F0b8zMZULMj/image-20210316211942624.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/gMOP9F0b8zMZULMj/image-20210316212107044.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/gMOP9F0b8zMZULMj/image-20210316212317475.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/gMOP9F0b8zMZULMj/image-20210316212449598.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/gMOP9F0b8zMZULMj/image-20210316214052184.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/gMOP9F0b8zMZULMj/image-20210317210723036.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/gMOP9F0b8zMZULMj/image-20210317211006818.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/gMOP9F0b8zMZULMj/image-20210317211425498.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/gMOP9F0b8zMZULMj/image-20210317211445418.png">
 <meta property="article:published_time" content="2020-07-18T13:35:42.000Z">
 <meta property="article:modified_time" content="2020-07-18T13:35:42.000Z">
 <meta property="article:author" content="Liu Y.L.">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="C++内存管理">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://yuanlehome.github.io/gMOP9F0b8zMZULMj/image-20210316211007882.png">
+<meta name="twitter:image" content="https://yuanlehome.github.io/blog_v0/gMOP9F0b8zMZULMj/image-20210316211007882.png">
 
-<link rel="canonical" href="https://yuanlehome.github.io/gMOP9F0b8zMZULMj/">
+<link rel="canonical" href="https://yuanlehome.github.io/blog_v0/gMOP9F0b8zMZULMj/">
 
 
 <script id="page-configurations">
@@ -209,7 +209,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yuanlehome.github.io/gMOP9F0b8zMZULMj/">
+    <link itemprop="mainEntityOfPage" href="https://yuanlehome.github.io/blog_v0/gMOP9F0b8zMZULMj/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">

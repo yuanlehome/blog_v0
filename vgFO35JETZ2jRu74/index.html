@@ -23,29 +23,29 @@
   <meta name="description" content="7. 构造和析构的直接调用方式通过指针不可以直接调用构造函数，但可以直接调用析构函数。可以通过placement new来直接调用构造函数。 123456789101112131415161718192021struct A&amp;#123;    int a;    int b;    A(int _a, int _b) : a(_a), b(_b) &amp;#123;&amp;#125;&amp;#125;;int ma">
 <meta property="og:type" content="article">
 <meta property="og:title" content="认识C++内存管理的工具 （二）">
-<meta property="og:url" content="https://yuanlehome.github.io/vgFO35JETZ2jRu74/index.html">
+<meta property="og:url" content="https://yuanlehome.github.io/blog_v0/vgFO35JETZ2jRu74/index.html">
 <meta property="og:site_name" content="LYL&#39;s Blog">
 <meta property="og:description" content="7. 构造和析构的直接调用方式通过指针不可以直接调用构造函数，但可以直接调用析构函数。可以通过placement new来直接调用构造函数。 123456789101112131415161718192021struct A&amp;#123;    int a;    int b;    A(int _a, int _b) : a(_a), b(_b) &amp;#123;&amp;#125;&amp;#125;;int ma">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://yuanlehome.github.io/vgFO35JETZ2jRu74/image-20210316200134379.png">
-<meta property="og:image" content="https://yuanlehome.github.io/vgFO35JETZ2jRu74/image-20210316201727370.png">
-<meta property="og:image" content="https://yuanlehome.github.io/vgFO35JETZ2jRu74/image-20210316201922911.png">
-<meta property="og:image" content="https://yuanlehome.github.io/vgFO35JETZ2jRu74/image-20210316202736446.png">
-<meta property="og:image" content="https://yuanlehome.github.io/vgFO35JETZ2jRu74/image-20210316203737564.png">
-<meta property="og:image" content="https://yuanlehome.github.io/vgFO35JETZ2jRu74/image-20210316205136096.png">
-<meta property="og:image" content="https://yuanlehome.github.io/vgFO35JETZ2jRu74/30.png">
-<meta property="og:image" content="https://yuanlehome.github.io/vgFO35JETZ2jRu74/31.png">
-<meta property="og:image" content="https://yuanlehome.github.io/vgFO35JETZ2jRu74/33.png">
-<meta property="og:image" content="https://yuanlehome.github.io/vgFO35JETZ2jRu74/34.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/vgFO35JETZ2jRu74/image-20210316200134379.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/vgFO35JETZ2jRu74/image-20210316201727370.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/vgFO35JETZ2jRu74/image-20210316201922911.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/vgFO35JETZ2jRu74/image-20210316202736446.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/vgFO35JETZ2jRu74/image-20210316203737564.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/vgFO35JETZ2jRu74/image-20210316205136096.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/vgFO35JETZ2jRu74/30.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/vgFO35JETZ2jRu74/31.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/vgFO35JETZ2jRu74/33.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/vgFO35JETZ2jRu74/34.png">
 <meta property="article:published_time" content="2020-07-08T13:35:42.000Z">
 <meta property="article:modified_time" content="2020-07-08T13:35:42.000Z">
 <meta property="article:author" content="Liu Y.L.">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="C++内存管理">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://yuanlehome.github.io/vgFO35JETZ2jRu74/image-20210316200134379.png">
+<meta name="twitter:image" content="https://yuanlehome.github.io/blog_v0/vgFO35JETZ2jRu74/image-20210316200134379.png">
 
-<link rel="canonical" href="https://yuanlehome.github.io/vgFO35JETZ2jRu74/">
+<link rel="canonical" href="https://yuanlehome.github.io/blog_v0/vgFO35JETZ2jRu74/">
 
 
 <script id="page-configurations">
@@ -207,7 +207,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yuanlehome.github.io/vgFO35JETZ2jRu74/">
+    <link itemprop="mainEntityOfPage" href="https://yuanlehome.github.io/blog_v0/vgFO35JETZ2jRu74/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
