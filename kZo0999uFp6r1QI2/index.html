@@ -23,31 +23,31 @@
   <meta name="description" content="1. 内存管理函数的层次从下图中可以看到，C++程序员处于的位置是最上层的Applications，用的最多的是new，new[]，如果用容器，则内存基本不用管理。其次也可以调用malloc。至于最底层的操作系统级别的API，没有可移植性。它们之间的调用关系如上图的箭头所示。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="认识C++内存管理的工具 （一）">
-<meta property="og:url" content="https://yuanlehome.github.io/kZo0999uFp6r1QI2/index.html">
+<meta property="og:url" content="https://yuanlehome.github.io/blog_v0/kZo0999uFp6r1QI2/index.html">
 <meta property="og:site_name" content="LYL&#39;s Blog">
 <meta property="og:description" content="1. 内存管理函数的层次从下图中可以看到，C++程序员处于的位置是最上层的Applications，用的最多的是new，new[]，如果用容器，则内存基本不用管理。其次也可以调用malloc。至于最底层的操作系统级别的API，没有可移植性。它们之间的调用关系如上图的箭头所示。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://yuanlehome.github.io/kZo0999uFp6r1QI2/20.png">
-<meta property="og:image" content="https://yuanlehome.github.io/kZo0999uFp6r1QI2/image-20210315204443125.png">
-<meta property="og:image" content="https://yuanlehome.github.io/kZo0999uFp6r1QI2/21.png">
-<meta property="og:image" content="https://yuanlehome.github.io/kZo0999uFp6r1QI2/22.png">
-<meta property="og:image" content="https://yuanlehome.github.io/kZo0999uFp6r1QI2/23.png">
-<meta property="og:image" content="https://yuanlehome.github.io/kZo0999uFp6r1QI2/24.png">
-<meta property="og:image" content="https://yuanlehome.github.io/kZo0999uFp6r1QI2/image-20210315210220075.png">
-<meta property="og:image" content="https://yuanlehome.github.io/kZo0999uFp6r1QI2/25.png">
-<meta property="og:image" content="https://yuanlehome.github.io/kZo0999uFp6r1QI2/26.png">
-<meta property="og:image" content="https://yuanlehome.github.io/kZo0999uFp6r1QI2/27.png">
-<meta property="og:image" content="https://yuanlehome.github.io/kZo0999uFp6r1QI2/28.png">
-<meta property="og:image" content="https://yuanlehome.github.io/kZo0999uFp6r1QI2/29.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/kZo0999uFp6r1QI2/20.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/kZo0999uFp6r1QI2/image-20210315204443125.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/kZo0999uFp6r1QI2/21.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/kZo0999uFp6r1QI2/22.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/kZo0999uFp6r1QI2/23.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/kZo0999uFp6r1QI2/24.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/kZo0999uFp6r1QI2/image-20210315210220075.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/kZo0999uFp6r1QI2/25.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/kZo0999uFp6r1QI2/26.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/kZo0999uFp6r1QI2/27.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/kZo0999uFp6r1QI2/28.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/kZo0999uFp6r1QI2/29.png">
 <meta property="article:published_time" content="2020-06-28T13:35:42.000Z">
 <meta property="article:modified_time" content="2020-06-28T13:35:42.000Z">
 <meta property="article:author" content="Liu Y.L.">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="C++内存管理">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://yuanlehome.github.io/kZo0999uFp6r1QI2/20.png">
+<meta name="twitter:image" content="https://yuanlehome.github.io/blog_v0/kZo0999uFp6r1QI2/20.png">
 
-<link rel="canonical" href="https://yuanlehome.github.io/kZo0999uFp6r1QI2/">
+<link rel="canonical" href="https://yuanlehome.github.io/blog_v0/kZo0999uFp6r1QI2/">
 
 
 <script id="page-configurations">
@@ -209,7 +209,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yuanlehome.github.io/kZo0999uFp6r1QI2/">
+    <link itemprop="mainEntityOfPage" href="https://yuanlehome.github.io/blog_v0/kZo0999uFp6r1QI2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">

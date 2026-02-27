@@ -23,27 +23,27 @@
   <meta name="description" content="背景知识 IPC对象 内核中用于进程间通信的数据结构，全局可见，如消息队列的msg_queue结构体、信号量的sem_array结构体，共享内存的shmid_kernel结构体。类似于普通文件是通过文件名（文件描述符）进行读写操作，通过IPC key和IPC标识符进行IPC对象的读写操作。  IPC标识符ID 类似于文件描述符fd，可以用一个IPC标识符来引用一个IPC对象，是一个32位整数，是I">
 <meta property="og:type" content="article">
 <meta property="og:title" content="操作系统之进程间通信（含内核实现）">
-<meta property="og:url" content="https://yuanlehome.github.io/tRettVqCkfzWbulf/index.html">
+<meta property="og:url" content="https://yuanlehome.github.io/blog_v0/tRettVqCkfzWbulf/index.html">
 <meta property="og:site_name" content="LYL&#39;s Blog">
 <meta property="og:description" content="背景知识 IPC对象 内核中用于进程间通信的数据结构，全局可见，如消息队列的msg_queue结构体、信号量的sem_array结构体，共享内存的shmid_kernel结构体。类似于普通文件是通过文件名（文件描述符）进行读写操作，通过IPC key和IPC标识符进行IPC对象的读写操作。  IPC标识符ID 类似于文件描述符fd，可以用一个IPC标识符来引用一个IPC对象，是一个32位整数，是I">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://yuanlehome.github.io/tRettVqCkfzWbulf/641.jpg">
-<meta property="og:image" content="https://yuanlehome.github.io/tRettVqCkfzWbulf/dfsgdfg.jpg">
-<meta property="og:image" content="https://yuanlehome.github.io/tRettVqCkfzWbulf/asdfsd.jpg">
-<meta property="og:image" content="https://yuanlehome.github.io/tRettVqCkfzWbulf/image-20210412111846194.png">
-<meta property="og:image" content="https://yuanlehome.github.io/tRettVqCkfzWbulf/image-20210412120217377.png">
-<meta property="og:image" content="https://yuanlehome.github.io/tRettVqCkfzWbulf/image-20210412120755697.png">
-<meta property="og:image" content="https://yuanlehome.github.io/tRettVqCkfzWbulf/3333rtewrfg.jpg">
-<meta property="og:image" content="https://yuanlehome.github.io/tRettVqCkfzWbulf/image-20210412121016593.png">
-<meta property="og:image" content="https://yuanlehome.github.io/tRettVqCkfzWbulf/image-20210412170936487.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/tRettVqCkfzWbulf/641.jpg">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/tRettVqCkfzWbulf/dfsgdfg.jpg">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/tRettVqCkfzWbulf/asdfsd.jpg">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/tRettVqCkfzWbulf/image-20210412111846194.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/tRettVqCkfzWbulf/image-20210412120217377.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/tRettVqCkfzWbulf/image-20210412120755697.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/tRettVqCkfzWbulf/3333rtewrfg.jpg">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/tRettVqCkfzWbulf/image-20210412121016593.png">
+<meta property="og:image" content="https://yuanlehome.github.io/blog_v0/tRettVqCkfzWbulf/image-20210412170936487.png">
 <meta property="article:published_time" content="2021-03-25T13:35:42.000Z">
 <meta property="article:modified_time" content="2021-03-25T13:35:42.000Z">
 <meta property="article:author" content="Liu Y.L.">
 <meta property="article:tag" content="操作系统">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://yuanlehome.github.io/tRettVqCkfzWbulf/641.jpg">
+<meta name="twitter:image" content="https://yuanlehome.github.io/blog_v0/tRettVqCkfzWbulf/641.jpg">
 
-<link rel="canonical" href="https://yuanlehome.github.io/tRettVqCkfzWbulf/">
+<link rel="canonical" href="https://yuanlehome.github.io/blog_v0/tRettVqCkfzWbulf/">
 
 
 <script id="page-configurations">
@@ -205,7 +205,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yuanlehome.github.io/tRettVqCkfzWbulf/">
+    <link itemprop="mainEntityOfPage" href="https://yuanlehome.github.io/blog_v0/tRettVqCkfzWbulf/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
